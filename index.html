@@ -3,108 +3,217 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10130f">
+  <meta name="theme-color" content="#111315">
   <meta name="description" content="Privacy Policy for the Nexabot Batch Automation Chrome extension.">
-  <title>Privacy Policy — Nexabot Batch Automation</title>
+  <title>Privacy Policy | Nexabot Batch Automation</title>
   <style>
-    :root { color-scheme: dark; --bg:#10130f; --panel:#171b16; --line:#2b3329; --text:#e9eee6; --muted:#a7b0a2; --lime:#b7f36b; --lime-dim:#203018; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; scroll-padding-top:24px; }
-    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.72 system-ui,-apple-system,"Segoe UI",sans-serif; }
-    a { color:var(--lime); text-underline-offset:3px; }
-    a:hover { color:#d1ff9d; }
-    .shell { width:min(1120px,100% - 40px); margin:0 auto; }
-    header { padding:54px 0 36px; border-bottom:1px solid var(--line); }
-    .eyebrow { margin:0 0 10px; color:var(--lime); font-size:.76rem; font-weight:750; letter-spacing:.13em; text-transform:uppercase; }
-    h1 { max-width:760px; margin:0; font-size:clamp(2rem,5vw,3.6rem); line-height:1.1; letter-spacing:-.04em; }
-    .updated { margin:18px 0 0; color:var(--muted); font-size:.92rem; }
-    .layout { display:grid; grid-template-columns:260px minmax(0,1fr); gap:56px; align-items:start; padding:40px 0 72px; }
-    nav { position:sticky; top:24px; padding:20px; border:1px solid var(--line); border-radius:14px; background:var(--panel); }
-    nav h2 { margin:0 0 12px; font-size:.9rem; }
-    nav ol { margin:0; padding-left:20px; color:var(--muted); font-size:.9rem; }
-    nav li { padding:3px 0; }
-    nav a { color:var(--muted); text-decoration:none; }
-    nav a:hover, nav a:focus-visible { color:var(--lime); text-decoration:underline; }
-    main { min-width:0; }
-    section { padding:0 0 28px; margin:0 0 28px; border-bottom:1px solid var(--line); }
-    section:last-child { border-bottom:0; }
-    main h2 { margin:0 0 12px; font-size:1.45rem; line-height:1.3; letter-spacing:-.02em; }
-    p { margin:0 0 13px; }
-    ul { margin:8px 0 14px; padding-left:24px; }
-    li { margin:5px 0; }
-    .note { padding:14px 16px; border-left:3px solid var(--lime); border-radius:0 8px 8px 0; background:var(--lime-dim); color:#dce9d0; }
-    code { color:#d6f6b0; font:.92em ui-monospace,SFMono-Regular,Consolas,monospace; overflow-wrap:anywhere; }
-    footer { padding:22px 0 34px; border-top:1px solid var(--line); color:var(--muted); font-size:.88rem; }
-    @media (max-width:760px) { .shell { width:min(100% - 28px,680px); } header { padding:38px 0 26px; } .layout { grid-template-columns:1fr; gap:30px; padding-top:26px; } nav { position:static; } nav ol { columns:2; column-gap:24px; } nav li { break-inside:avoid; } }
-    @media (max-width:420px) { nav ol { columns:1; } body { font-size:15px; } }
-    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    :root {
+      color-scheme: dark;
+      --background: #111315;
+      --surface: #191c1f;
+      --border: #34393e;
+      --text: #f2f4f5;
+      --muted: #c0c5c9;
+      --link: #d6dde2;
+      --focus: #fff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+    a { color: var(--link); text-decoration-thickness: .08em; text-underline-offset: .2em; }
+    a:hover { color: var(--text); }
+    a:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; border-radius: 2px; }
+    .container { width: min(1080px, calc(100% - 3rem)); margin-inline: auto; }
+    .page-header { padding: 3.5rem 0 2.25rem; border-bottom: 1px solid var(--border); }
+    .eyebrow { margin: 0 0 .55rem; color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { max-width: 760px; margin: 0; font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.13; letter-spacing: -.035em; }
+    .date { margin: 1rem 0 0; color: var(--muted); font-size: .94rem; }
+    .layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 3.5rem; align-items: start; padding-block: 2.5rem 4rem; }
+    .contents { position: sticky; top: 1.5rem; padding: 1.15rem; border: 1px solid var(--border); border-radius: .75rem; background: var(--surface); }
+    .contents h2 { margin: 0 0 .65rem; font-size: .92rem; letter-spacing: 0; }
+    .contents ol { margin: 0; padding-left: 1.25rem; color: var(--muted); font-size: .88rem; line-height: 1.55; }
+    .contents li { padding: .18rem 0; }
+    .contents a { color: var(--muted); text-decoration: none; }
+    .contents a:hover, .contents a:focus-visible { color: var(--text); text-decoration: underline; }
+    main { min-width: 0; max-width: 720px; }
+    section { padding-bottom: 1.65rem; margin-bottom: 1.65rem; border-bottom: 1px solid var(--border); scroll-margin-top: 1.5rem; }
+    section:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
+    main h2 { margin: 0 0 .7rem; font-size: 1.35rem; line-height: 1.35; letter-spacing: -.015em; }
+    p { margin: 0 0 .85rem; }
+    ul { margin: .45rem 0 .9rem; padding-left: 1.35rem; }
+    li { margin: .35rem 0; }
+    code { overflow-wrap: anywhere; font: .91em ui-monospace, SFMono-Regular, Consolas, monospace; }
+    footer { padding: 1.4rem 0 2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: .88rem; }
+    @media (max-width: 800px) {
+      .container { width: min(100% - 2rem, 680px); }
+      .page-header { padding: 2.5rem 0 1.75rem; }
+      .layout { grid-template-columns: 1fr; gap: 1.75rem; padding-block: 1.75rem 3rem; }
+      .contents { position: static; }
+      .contents ol { columns: 2; column-gap: 1.5rem; }
+      .contents li { break-inside: avoid; }
+    }
+    @media (max-width: 460px) {
+      .contents ol { columns: 1; }
+      body { font-size: .96rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
 <body>
-  <header><div class="shell">
-    <p class="eyebrow">Privacy documentation</p>
-    <h1>Nexabot Batch Automation</h1>
-    <p class="updated"><strong>Privacy Policy</strong> · Last updated: October 31, 2026</p>
-  </div></header>
-  <div class="shell layout">
-    <nav aria-label="Table of contents"><h2>Contents</h2><ol>
-      <li><a href="#introduction">Introduction</a></li><li><a href="#information">Information We Process</a></li><li><a href="#use">How We Use Information</a></li><li><a href="#storage">Local Data Storage</a></li><li><a href="#third-parties">Third-Party Services</a></li><li><a href="#sharing">Data Sharing and Disclosure</a></li><li><a href="#security">Data Security</a></li><li><a href="#permissions">Browser Permissions</a></li><li><a href="#children">Children's Privacy</a></li><li><a href="#changes">Policy Changes</a></li><li><a href="#contact">Contact Information</a></li>
-    </ol></nav>
-    <main>
-      <section id="introduction"><h2>1. Introduction</h2>
-        <p>This Privacy Policy describes how the Nexabot Batch Automation Chrome extension (the “Extension”) processes information. The Extension automates batches of video-generation prompts on <strong>nexabot.id</strong>. It interacts with the Nexabot website using the page interface in your browser; it is not a standalone video-generation service.</p>
-        <p>When you start a generation batch, the prompts and any reference images you select are supplied to Nexabot through its website interface. Information handled by Nexabot is subject to Nexabot's own policies and practices, which are outside the Extension developer's control.</p>
+  <header class="page-header">
+    <div class="container">
+      <p class="eyebrow">Privacy Policy</p>
+      <h1>Nexabot Batch Automation</h1>
+      <p class="date"><strong>Last updated:</strong> November 1, 2026</p>
+    </div>
+  </header>
+
+  <div class="container layout">
+    <nav class="contents" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#data">Data We Collect and Process</a></li>
+        <li><a href="#uses">How We Use Your Data</a></li>
+        <li><a href="#prompts">Prompt and Reference Image Processing</a></li>
+        <li><a href="#license">License Verification and Device Identification</a></li>
+        <li><a href="#local-storage">Local Browser Storage</a></li>
+        <li><a href="#transmission">Data Transmission and Security</a></li>
+        <li><a href="#sharing">Data Sharing and Third-Party Services</a></li>
+        <li><a href="#retention">Data Retention and Deletion</a></li>
+        <li><a href="#permissions">Chrome Extension Permissions</a></li>
+        <li><a href="#choices">User Rights and Choices</a></li>
+        <li><a href="#children">Children's Privacy</a></li>
+        <li><a href="#changes">Changes to This Privacy Policy</a></li>
+        <li><a href="#contact">Contact Information</a></li>
+      </ol>
+    </nav>
+
+    <main id="main-content">
+      <section id="introduction" aria-labelledby="heading-introduction">
+        <h2 id="heading-introduction">1. Introduction</h2>
+        <p>This Privacy Policy explains how Nexabot Batch Automation (the “Extension”) processes information. The Extension automates video-generation batches through the Nexabot website at <a href="https://nexabot.id">nexabot.id</a>. It interacts with the generator page in your browser and uses the Nexabot service to generate videos.</p>
+        <p>The Extension handles user-provided prompts, optional reference images, batch progress, download metadata, and license information as described below. Some information stays in your browser; prompts and selected images are submitted to Nexabot, and license details are sent to the license service.</p>
       </section>
-      <section id="information"><h2>2. Information We Process</h2>
-        <p>The Extension processes the following information to provide its features:</p>
+
+      <section id="data" aria-labelledby="heading-data">
+        <h2 id="heading-data">2. Data We Collect and Process</h2>
+        <p>For the Extension's batch automation and license features, the Extension processes these categories of information:</p>
         <ul>
-          <li><strong>Prompts and generation settings:</strong> prompt text you enter, video mode, aspect ratio, resolution, and prompt/reference-image associations.</li>
-          <li><strong>Reference images:</strong> image files you select for Ingredients mode. The Extension reads these in the popup and temporarily passes their contents to the Nexabot page when the associated job runs.</li>
-          <li><strong>Batch and download status:</strong> queue and job identifiers, job status, retry/error details, timestamps, download method, and the resulting local filename/path when Chrome provides it.</li>
-          <li><strong>License information:</strong> the license key you enter, a randomly generated device identifier, and the license-validation response/status.</li>
-          <li><strong>Download metadata:</strong> when needed to monitor an Extension-initiated Nexabot video download, Chrome download identifiers and status, filename, MIME type, and byte count. If you use the download-check feature, the Extension reads recent Chrome download entries and displays matching video filenames.</li>
-          <li><strong>Nexabot page information:</strong> the Extension checks the Nexabot generator page's controls and visible status/result elements to operate the interface, detect generation completion or errors, and initiate and monitor downloads.</li>
+          <li><strong>Prompt and job data:</strong> text prompts, job and queue identifiers, video mode, aspect ratio, resolution, prompt order, image count, progress state, retry count, and error messages. Prompt text and job status are stored locally; prompts are also submitted to Nexabot when you run a batch.</li>
+          <li><strong>Reference images:</strong> image files you choose for Ingredients mode, including their contents and file names while selected. Their contents are temporarily passed through the Extension to the Nexabot page for upload; the Extension does not write image contents to its local extension storage.</li>
+          <li><strong>License data:</strong> the license key you enter, a randomly generated device ID, and the status and other response fields returned by the license service. The key and device ID are sent to the license service for activation and validation.</li>
+          <li><strong>Page and download data:</strong> information read from the Nexabot generator page to operate its controls and detect visible generation results or errors; video media URLs exposed by that page; and Chrome download identifiers, status, filename, MIME type, byte count, and timing information used to monitor downloads. If you request the download check, the Extension searches up to 40 recent Chrome download entries and displays matching video filenames.</li>
+          <li><strong>Browser context:</strong> the active tab's ID and URL are checked to ensure the batch runs on the Nexabot generator page. The Extension does not request the Cookies permission or use a cookies API.</li>
         </ul>
-        <p>The Extension's inspected source contains no analytics or telemetry integration, and no other network request mechanism was found in its JavaScript. The Nexabot website itself may use its own scripts, storage, network services, and account data; this policy does not describe those practices.</p>
+        <p>The Extension source reviewed does not include an analytics or advertising SDK, or code that sends prompts, images, or download history to the license service.</p>
       </section>
-      <section id="use"><h2>3. How We Use Information</h2>
-        <p>We use prompts and settings to populate Nexabot's generator and run the batch you request. Reference images are attached to the relevant Nexabot job when you select Ingredients mode. Page information and download metadata let the Extension track job progress, recover queue status, and confirm that a video download has completed. License information is used to activate and validate the Extension's license.</p>
-      </section>
-      <section id="storage"><h2>4. Local Data Storage</h2>
-        <p>The Extension uses Chrome's <code>chrome.storage.local</code> to keep the batch queue (including prompts, settings, status and errors), temporary download-monitoring state, the license key, device identifier, and license response in your browser profile. Queue data is removed when you use the Extension's clear/reset action. That action does not remove the stored license key or device identifier. Chrome manages the Extension's local storage; uninstalling the Extension normally removes its extension storage.</p>
-        <p>Selected image contents are held in memory while the popup and content script pass them to the Nexabot page; the inspected code does not save image contents in <code>chrome.storage.local</code>. Chrome separately manages downloaded video files and its download history according to your browser settings. The Extension may read download metadata as described above.</p>
-      </section>
-      <section id="third-parties"><h2>5. Third-Party Services (Nexabot)</h2>
-        <p><strong>Nexabot:</strong> when you run a batch, the Extension places each prompt into the Nexabot video-generator page and activates its Generate control. In Ingredients mode, it also places the reference image or images you selected into that page. Nexabot receives this material through the website's normal interface and processes the generation. The Extension also reads the resulting video element and uses its download control or video URL to download the result through Chrome. Nexabot's own terms, privacy policy, retention, and processing practices govern its service.</p>
-        <p><strong>License validation service:</strong> the Extension sends your license key and generated device identifier in HTTPS POST requests to <code>nexabot-license-server.frangga-snow.workers.dev</code> for license activation and validation. The response is stored locally as license status. The inspected Extension source does not establish who operates this endpoint or how long the service retains data. Confirm its operator and handling practices before publishing.</p>
-        <p>Video media may be downloaded from the URL exposed by Nexabot's page, or through Nexabot's own download button if direct downloading is unavailable. The specific media host may depend on Nexabot's implementation. The Extension source does not include a separate developer-operated video-processing server.</p>
-      </section>
-      <section id="sharing"><h2>6. Data Sharing and Disclosure</h2>
-        <p>The Extension sends prompts and selected reference images to Nexabot when you start generation, and sends license keys and the device identifier to the license-validation endpoint when checking or activating a license. These are distinct data flows for distinct services. Browser and network providers may also process connection or download information as part of providing their services.</p>
-        <p>The inspected Extension code does not send queue contents, selected images, or download history to the license endpoint, and does not contain analytics/advertising sharing code. This statement is limited to the Extension source reviewed; it does not cover data collected independently by Nexabot, Chrome, or the license service.</p>
-      </section>
-      <section id="security"><h2>7. Data Security</h2>
-        <p>Connections explicitly made by the Extension to Nexabot and the license endpoint use HTTPS. Local Extension data is stored in Chrome's extension storage within your browser profile. The inspected code does not encrypt the license key or queue data itself, so protect access to your browser profile and device. No method of transmission or storage can be guaranteed completely secure.</p>
-      </section>
-      <section id="permissions"><h2>8. Browser Permissions</h2>
+
+      <section id="uses" aria-labelledby="heading-uses">
+        <h2 id="heading-uses">3. How We Use Your Data</h2>
         <ul>
-          <li><strong>Storage:</strong> saves queue progress, download-monitoring state, and license data in the browser.</li>
-          <li><strong>Downloads:</strong> starts and monitors video downloads, assigns a batch filename, and reads recent download metadata for its download-check feature.</li>
-          <li><strong>Tabs:</strong> checks the active tab, opens or reloads the Nexabot generator when needed, communicates with the Nexabot page, and opens Chrome's download settings when requested.</li>
-          <li><strong>Side panel:</strong> displays the Extension's interface from Chrome's side panel.</li>
-          <li><strong>Site access:</strong> runs the content script on <code>https://nexabot.id/*</code> and accesses the license endpoint at <code>https://nexabot-license-server.frangga-snow.workers.dev/*</code> for the operations described in this policy.</li>
+          <li>Prompts, settings, and selected images are used to submit the video-generation jobs you request on Nexabot.</li>
+          <li>Queue, page, and download information is used to run, resume, and show the status of your batch and to confirm downloads.</li>
+          <li>The license key and device ID are used by the license service to activate and validate your license and enforce its device binding.</li>
+          <li>Local storage preserves queue progress and license state between uses of the Extension.</li>
+        </ul>
+        <p>FlowPilot limits its use of information handled by the Extension to the purposes described in this Policy and the Extension's single purpose. FlowPilot does not sell this information or use it for personalized advertising. Any transfer described here is made to provide the requested Nexabot generation or license feature. For information under FlowPilot's direct control, human access is limited to the exceptions permitted by the Chrome Web Store User Data Policy, such as a user's explicit consent for specific support, security needs, legal compliance, or aggregated and anonymized internal operations. FlowPilot's use of user data accessed by the Extension is subject to the Chrome Web Store User Data Policy, including its Limited Use requirements.</p>
+      </section>
+
+      <section id="prompts" aria-labelledby="heading-prompts">
+        <h2 id="heading-prompts">4. Prompt and Reference Image Processing</h2>
+        <p>When you start a batch, the Extension places each prompt and the selected generation settings into the Nexabot video-generator page and activates the page's Generate control. In Ingredients mode, the Extension reads the image files you selected and places them into the Nexabot page's image input for the corresponding job. Nexabot receives and processes this content to generate the requested video.</p>
+        <p>The Extension does not store image contents in <code>chrome.storage.local</code>. It converts selected images to temporary in-memory data for transfer to the Nexabot page. The page and Nexabot service may process or retain submitted prompts, images, and resulting videos under their own service practices. This Extension does not set or control Nexabot's retention period.</p>
+      </section>
+
+      <section id="license" aria-labelledby="heading-license">
+        <h2 id="heading-license">5. License Verification and Device Identification</h2>
+        <p>For activation and validation, the Extension sends the license key you entered and a randomly generated device ID to the Nexabot license service over HTTPS. The original key is transmitted so the service can validate it; the service does not store the original license key in plaintext in its database. It stores a hash of the key for matching.</p>
+        <p>After successful activation, the service stores the device ID, activation time, license validity period, and last validation time. The device ID binds one license to one device. The device-binding record remains until an administrator releases the binding or the license is deleted. Releasing a device binding does not necessarily delete all license-related records.</p>
+        <p>The license service is operated by the Nexabot developer using Cloudflare Workers. Cloudflare provides the infrastructure for the Worker requests. The license key and device ID are processed by the license service for validation, even though the original key is not stored there in plaintext in the database.</p>
+      </section>
+
+      <section id="local-storage" aria-labelledby="heading-local-storage">
+        <h2 id="heading-local-storage">6. Local Browser Storage</h2>
+        <p>The Extension uses <code>chrome.storage.local</code> in your Chrome profile for:</p>
+        <ul>
+          <li>The batch queue, including prompts, settings, job states, errors, and download results.</li>
+          <li>Temporary download-monitoring state, such as a job index, tab/download identifier, and timestamps.</li>
+          <li>The license key, device ID, and license validation response.</li>
+        </ul>
+        <p>These values are not synchronized by the Extension to a developer-operated storage service. The license key is stored in the browser's extension storage so it can be sent again for license validation; the Extension does not encrypt it separately before local storage. Selected image contents remain in memory for the transfer described above. Chrome stores downloaded video files and download history separately under your browser settings.</p>
+      </section>
+
+      <section id="transmission" aria-labelledby="heading-transmission">
+        <h2 id="heading-transmission">7. Data Transmission and Security</h2>
+        <p>The Extension's license requests use HTTPS. Prompts and reference images are supplied to the Nexabot generator over the Nexabot website connection, which uses HTTPS. Video downloads are initiated by Chrome from the video URL exposed by Nexabot or by using Nexabot's own download control; the media host may be selected by Nexabot.</p>
+        <p>The Extension stores its local queue and license values in Chrome extension storage and does not apply separate encryption to those values. Protect access to your Chrome profile and device. Cloudflare Workers processes requests to the license service as its infrastructure provider; Cloudflare's applicable service terms and privacy practices apply to its infrastructure processing.</p>
+      </section>
+
+      <section id="sharing" aria-labelledby="heading-sharing">
+        <h2 id="heading-sharing">8. Data Sharing and Third-Party Services</h2>
+        <ul>
+          <li><strong>Nexabot (<a href="https://nexabot.id">nexabot.id</a>):</strong> receives prompts, settings needed for a generation, and reference images you select, and returns the generated video through its website. The Extension uses the Nexabot page and does not provide a separate video-generation backend. Nexabot's own privacy and retention practices govern its service.</li>
+          <li><strong>Nexabot license service and Cloudflare:</strong> the license service receives the license key and device ID for activation and validation. It runs on Cloudflare Workers, so Cloudflare provides the request-processing infrastructure. The Extension does not send the prompt queue, reference images, or download history to this license endpoint.</li>
+          <li><strong>Chrome:</strong> Chrome provides local extension storage and the Downloads API. Chrome processes the download request and stores the downloaded file and browser download records according to Chrome's settings.</li>
+          <li><strong>Video delivery host:</strong> a video host selected by Nexabot may receive the browser's request to download the generated video. The Extension cannot identify a fixed host in advance.</li>
+        </ul>
+        <p>FlowPilot does not sell Extension data or share it with advertising networks. The Extension's transfers to Nexabot and the license service are limited to providing the features described in this Policy.</p>
+      </section>
+
+      <section id="retention" aria-labelledby="heading-retention">
+        <h2 id="heading-retention">9. Data Retention and Deletion</h2>
+        <ul>
+          <li><strong>Queue and download-monitoring data:</strong> retained in local extension storage until you use the Extension's clear/reset action, which removes the queue and download-monitoring state, or remove the Extension from Chrome.</li>
+          <li><strong>Local license values:</strong> the license key, device ID, and license response remain in local extension storage. The clear/reset action does not remove them. Remove the Extension from Chrome to remove its extension storage; the license service's server-side records are not removed by this local action.</li>
+          <li><strong>License service records:</strong> the service stores a hash of the license key and, after activation, the device ID and activation, validity, and last-validation information described above. A device-binding record remains until an administrator releases the binding or the license is deleted. No automatic deletion of all license data on unbinding is promised. A broader server-side retention period has not been specified.</li>
+          <li><strong>Nexabot prompts, images, and generated videos:</strong> submitted to Nexabot for generation. Their retention and deletion are controlled by Nexabot; the Extension does not define a retention period or delete those service-side copies.</li>
+          <li><strong>Downloaded files and Chrome download history:</strong> managed by Chrome and remain subject to the download location and history settings you choose. Delete them through Chrome or your device's file manager.</li>
+          <li><strong>Cloudflare operational data:</strong> the Extension does not control Cloudflare's infrastructure data. Its handling and retention are governed by Cloudflare's applicable service terms and privacy practices.</li>
         </ul>
       </section>
-      <section id="children"><h2>9. Children's Privacy</h2><p>The Extension is not intended for children under 13, and the developer does not knowingly seek to collect information directly from children. The Extension does not perform age verification. If you believe a child has provided information through the Extension or related services, contact the developer using the details below.</p></section>
-      <section id="changes"><h2>10. Policy Changes</h2><p>This Policy may be updated when the Extension or its data practices change. The revised version will be posted at the Privacy Policy page with an updated “Last updated” date. Please review it periodically.</p></section>
-      <section id="contact"><h2>11. Contact Information</h2>
-        <p>For privacy questions or requests, contact:</p><p><strong>Developer:</strong> [DEVELOPER NAME]<br><strong>Support:</strong> [SUPPORT EMAIL]</p>
-        <p class="note">Replace both bracketed placeholders with verified contact details before publishing this page.</p>
+
+      <section id="permissions" aria-labelledby="heading-permissions">
+        <h2 id="heading-permissions">10. Chrome Extension Permissions</h2>
+        <ul>
+          <li><strong>Storage:</strong> saves the queue, download-monitoring state, and license details locally.</li>
+          <li><strong>Downloads:</strong> starts video downloads, sets a batch filename, monitors completion, and reads recent download entries when you use the download-check feature.</li>
+          <li><strong>Tabs:</strong> checks the active tab, opens or reloads the Nexabot generator, communicates with its page, and opens Chrome download settings when you request that action.</li>
+          <li><strong>Side panel:</strong> displays the Extension interface in Chrome's side panel.</li>
+          <li><strong>Host access:</strong> runs the content script on <code>https://nexabot.id/*</code> and allows HTTPS requests to <code>https://nexabot-license-server.frangga-snow.workers.dev/*</code> for the generation and license features described above.</li>
+        </ul>
+      </section>
+
+      <section id="choices" aria-labelledby="heading-choices">
+        <h2 id="heading-choices">11. User Rights and Choices</h2>
+        <p>You choose whether to enter prompts, select reference images, activate a license, and start a generation. You can clear the locally stored queue and download-monitoring state with the Extension's clear/reset action. You can remove the Extension to remove its local extension storage. Manage downloaded files and Chrome download history through Chrome and your device.</p>
+        <p>For requests about license-service records, contact FlowPilot using the email below. Requests about prompts, images, account information, or videos submitted to Nexabot should be directed to Nexabot, because those records are handled by its service. The ability to access or delete a server-side license record may depend on the license service's verification and administrative process.</p>
+      </section>
+
+      <section id="children" aria-labelledby="heading-children">
+        <h2 id="heading-children">12. Children's Privacy</h2>
+        <p>The Extension is not designed to collect personal information from children. The developer does not knowingly seek personal information directly from children through the Extension. The Extension does not independently verify a user's age. If you believe a child has submitted personal information through the Extension, contact FlowPilot using the address below.</p>
+      </section>
+
+      <section id="changes" aria-labelledby="heading-changes">
+        <h2 id="heading-changes">13. Changes to This Privacy Policy</h2>
+        <p>This Policy may change if the Extension or its data practices change. The current version will be posted on this page, and the “Last updated” date above will be revised. Review this page periodically for updates.</p>
+      </section>
+
+      <section id="contact" aria-labelledby="heading-contact">
+        <h2 id="heading-contact">14. Contact Information</h2>
+        <p><strong>Developer:</strong> FlowPilot<br><strong>Privacy and support email:</strong> <a href="mailto:frangga.snow@gmail.com">frangga.snow@gmail.com</a></p>
       </section>
     </main>
   </div>
-  <footer><div class="shell">Nexabot Batch Automation · Privacy Policy</div></footer>
+
+  <footer><div class="container">Nexabot Batch Automation · Privacy Policy</div></footer>
 </body>
 </html>
-
-

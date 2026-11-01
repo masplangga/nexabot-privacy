@@ -1,14 +1,10 @@
 # Nexabot Batch Automation Privacy Policy
 
-This folder contains a standalone Privacy Policy page for the Nexabot Batch Automation Chrome extension. `index.html` uses internal CSS only and can be served directly by GitHub Pages.
+The standalone policy page is `index.html`. The public repository is [masplangga/nexabot-privacy](https://github.com/masplangga/nexabot-privacy). Commit and push the updated `index.html` and `README.md` to `main` before enabling GitHub Pages. GitHub Pages is not enabled yet.
 
 ## Publish with GitHub Pages
 
-1. Create a **public** GitHub repository named `nexabot-privacy`.
-2. Upload `index.html` to the repository root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Choose branch **main** and folder **/(root)**, then save.
-6. Wait for GitHub Pages to publish. The public URL will be shown in **Settings → Pages**. For a repository named `nexabot-privacy`, it is typically `https://<your-github-username>.github.io/nexabot-privacy/`.
-
-Before publishing, replace `[DEVELOPER NAME]` and `[SUPPORT EMAIL]` in `index.html` with accurate contact details. Confirm the license-service operator and its retention practices before making claims about them.
+1. Open the repository's **Settings → Pages**.
+2. Under **Build and deployment**, select **Deploy from a branch**.
+3. Select branch **main** and folder **/(root)**, then save.
+4. Wait for the Pages deployment to complete. The public policy URL will be `https://masplangga.github.io/nexabot-privacy/` and will also appear in **Settings → Pages**.
